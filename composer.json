@@ -1,0 +1,28 @@
+{
+  "name": "booking/office-booking",
+  "description": "Office booking",
+  "require": {
+    "php": "^8.0",
+    "larapack/dd": "1.*",
+    "vlucas/phpdotenv": "^5.5",
+    "twig/twig": "^3.6",
+    "doctrine/orm": "^2.15",
+    "symfony/cache": "^6.0",
+    "doctrine/dbal": "^3.6",
+    "doctrine/annotations": "^2.0",
+    "gedmo/doctrine-extensions": "^3.11",
+    "rakit/validation": "^1.4"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "muhammad6661",
+      "email": "nurmatov.muhammad000@gmail.com"
+    }
+  ]
+}

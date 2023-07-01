@@ -1,0 +1,56 @@
+{#
+    /**
+     * @file
+     * Twitter Bootstrap v4-beta.2 Sliding pagination control implementation.
+     *
+     * View that can be used with the pagination module
+     * from the Twitter Bootstrap CSS Toolkit
+     * https://getbootstrap.com/docs/4.0/components/pagination/
+     *
+     */
+    #}
+    
+    {% if pageCount > 1 %}
+        <nav>
+            {% set classAlign = (align is not defined) ? '' : align=='center' ? ' justify-content-center' : (align=='right' ? ' justify-content-end' : '') %}
+            {% set classSize = (size is not defined) ? '' : size=='large' ? ' pagination-lg' : (size=='small' ? ' pagination-sm' : '') %}
+            <ul class="pagination{{ classAlign }}{{ classSize }}">
+    
+                {% if previous is defined and previous >=1 %}
+                    <li class="page-item">
+                        <a class="page-link" rel="prev" href="{{current_url ~ '?' ~  'page=' ~ previous }}">&laquo;&nbsp;{{ 'Назад' }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">&laquo;&nbsp;{{ 'Назад' }}</span>
+                    </li>
+                {% endif %}
+    
+              
+    
+                {% for page in range(1, pageCount) %}
+                    {% if page != current %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{current_url ~ '?' ~  'page=' ~ page }}">{{ page }}</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ page }}</span>
+                        </li>
+                    {% endif %}
+    
+                {% endfor %}
+    
+               
+                {% if next is defined and next <= pageCount%}
+                    <li class="page-item">
+                        <a class="page-link" rel="next" href="{{current_url ~ '?' ~  'page=' ~ next }}">{{ 'Вперед' }}&nbsp;&raquo;</a>
+                    </li>
+                {% else %}
+                    <li  class="page-item disabled">
+                        <span class="page-link">{{ 'Вперед' }}&nbsp;&raquo;</span>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}

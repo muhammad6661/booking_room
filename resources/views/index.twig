@@ -1,0 +1,29 @@
+{% extends "layouts/app.twig" %}
+
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+    <div class="bg-body-light">
+        <div class="content content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center py-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="h3 font-w700 mb-2">
+                        Панель
+
+                    </h1>
+                    <h2 class="h6 font-w500 text-muted mb-0">
+                        Добро пожаловать
+                        <a class="font-w600" href="javascript:void(0)">
+                            {{ user_auth.fio }}
+                        </a>
+
+
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
