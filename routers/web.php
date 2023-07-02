@@ -20,5 +20,3 @@ $router->get('/booking-room', [BookingRoomController::class, 'index']);
 $router->post('/booking-room', [BookingRoomController::class, 'bookingRoom']);
 $router->post('/send-booking-room', [BookingRoomController::class, 'sendBooking']);
 
-$router->get('/send', [BookingRoomController::class, 'send']);
-$router->get('/sendSMS', [BookingRoomController::class, 'sendSMS']);

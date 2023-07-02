@@ -19,8 +19,8 @@ class SendSmsService
 
     public function SendSms($phone, $text)
     {
-        return $this->smsBy->SendMesasge($phone, $text);
-//        return $this->twilioSMS->SendMesasge($phone, $text);
+       $this->smsBy->SendMesasge($phone, $text);
+//      $this->twilioSMS->SendMesasge($phone, $text);
     }
 
 }

@@ -22,7 +22,7 @@ class BookingRoomController extends Controller
     }
 
     public function bookingRoom(Request $request, BookingRoomRepository $bookingRoomRepository, RoomRepository $roomRepository,
-                                SendMailService $sendMailService, UserRepository $userRepository)
+                                SendMailService $sendMailService, UserRepository $userRepository, SendSmsService $sendSmsService)
     {
         $this->validate($request,[
             'date_from' => 'required',
@@ -65,6 +65,14 @@ class BookingRoomController extends Controller
         $mail = $user->getEmail();
 
         $sendMailService->sendToMail($mail, $subject, $message);
+
+//        $message = "$text\n";
+//        $message .= "Кабинет:$room->getTitle()\n";
+//        $message .= "Адрес:$room->getAddress()\n";
+//        $message .= "Пользователь забронировал:$bookingRoom->getUser()->getFio()\n";
+//        $message .= "Дата бронирования: От $bookingRoom->getDateFrom() до $bookingRoom->getDateTo()";
+//        $sendSmsService->SendSms($user->getPhone(), $message);
+
         return $this->render('booking/send');
 
     }
@@ -75,23 +83,5 @@ class BookingRoomController extends Controller
         return $this->render('booking/send');
     }
 
-    /**
-     * @throws Exception
-     */
-    public function send(SendMailService $sendMailService)
-    {
-        $email = 'nurmatov.muhammad000@gmail.com';
-        $subject = 'Test';
-        $body = 'Body test';
-        $send = $sendMailService->sendToMail($email, $subject, $body);
-        dd($send);
-    }
 
-    public function sendSMS(SendSmsService $sendSmsService)
-    {
-        $phone = "+9515354359";
-        $text = "salom";
-        $sms = $sendSmsService->SendSms($phone, $text);
-        dd($sms);
-    }
 }
