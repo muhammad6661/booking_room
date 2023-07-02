@@ -11,7 +11,6 @@ class UserRepository extends BaseRepository
 {
 
     public string $entityName;
-
     public function __construct()
     {
         parent::__construct();

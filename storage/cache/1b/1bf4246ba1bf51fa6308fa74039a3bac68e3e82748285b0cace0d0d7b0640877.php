@@ -121,14 +121,10 @@ class __TwigTemplate_2ec03981d5ff6727bf4a0c7172b9b576e23e879e8deea605ed9c88832ae
         </div>
 
 
-        <script src=\"/public/assets/js/oneui.core.min.js\"></script>
+ 
         <script src=\"/public/assets/js/oneui.app.min.js\"></script>
 
-        <!-- Page JS Plugins -->
-        <script src=\"/public/assets/js/plugins/jquery-validation/jquery.validate.min.js\"></script>
 
-        <!-- Page JS Code -->
-        <script src=\"/public/assets/js/pages/op_auth_signin.min.js\"></script>
     </body>
 </html>
 ";
@@ -235,14 +231,10 @@ class __TwigTemplate_2ec03981d5ff6727bf4a0c7172b9b576e23e879e8deea605ed9c88832ae
         </div>
 
 
-        <script src=\"/public/assets/js/oneui.core.min.js\"></script>
+ 
         <script src=\"/public/assets/js/oneui.app.min.js\"></script>
 
-        <!-- Page JS Plugins -->
-        <script src=\"/public/assets/js/plugins/jquery-validation/jquery.validate.min.js\"></script>
 
-        <!-- Page JS Code -->
-        <script src=\"/public/assets/js/pages/op_auth_signin.min.js\"></script>
     </body>
 </html>
 ", "auth/registration.twig", "D:\\OpenServer\\domains\\office-booking.my\\resources\\views\\auth\\registration.twig");

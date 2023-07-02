@@ -195,19 +195,9 @@ MAIN CONTENT LAYOUT
 -->
 <script src='/public/assets/js/oneui.core.min.js'></script>
 
-<!--
-    OneUI JS
 
-    Custom functionality including Blocks/Layout API as well as other vital and optional helpers
-    webpack is putting everything together at /public/assets/_js/main/app.js
--->
 <script src=\"/public/assets/js/oneui.app.min.js\"></script>
 
-<!-- Page JS Plugins -->
-<script src=\"/public/assets/js/plugins/jquery-validation/jquery.validate.min.js\"></script>
-
-<!-- Page JS Code -->
-<script src=\"/public/assets/js/pages/op_auth_signin.min.js\"></script>
 </body>
 </html>
 ";
@@ -388,19 +378,9 @@ MAIN CONTENT LAYOUT
 -->
 <script src='/public/assets/js/oneui.core.min.js'></script>
 
-<!--
-    OneUI JS
 
-    Custom functionality including Blocks/Layout API as well as other vital and optional helpers
-    webpack is putting everything together at /public/assets/_js/main/app.js
--->
 <script src=\"/public/assets/js/oneui.app.min.js\"></script>
 
-<!-- Page JS Plugins -->
-<script src=\"/public/assets/js/plugins/jquery-validation/jquery.validate.min.js\"></script>
-
-<!-- Page JS Code -->
-<script src=\"/public/assets/js/pages/op_auth_signin.min.js\"></script>
 </body>
 </html>
 ", "auth/login.twig", "D:\\OpenServer\\domains\\office-booking.my\\resources\\views\\auth\\login.twig");

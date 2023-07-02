@@ -8,6 +8,6 @@ class BaseRepository
 
     public  function __construct()
     {
-        $this->doctrine = new Doctrine();
+        $this->doctrine = Doctrine::getInstance();
     }
 }

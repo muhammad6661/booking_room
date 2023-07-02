@@ -3,6 +3,7 @@
 namespace App\Models\Repository;
 
 use App\Core\BaseRepository;
+use App\Core\Doctrine;
 use App\Models\Entity\BookingRoom;
 use App\Models\Entity\Room;
 
@@ -22,5 +23,11 @@ class RoomRepository  extends BaseRepository
         $repo = $this->doctrine->em->getRepository($this->entityName);
 
         return $repo->findBy([], ['created_at' => 'DESC']);
+    }
+
+    public function getById($id)
+    {
+        $repo = $this->doctrine->em->getRepository($this->entityName);
+        return $repo->find($id);
     }
 }

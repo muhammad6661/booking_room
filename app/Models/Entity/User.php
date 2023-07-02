@@ -38,10 +38,13 @@ class User
 
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Room::class)]
     private Collection $rooms;
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: BookingRoom::class)]
+    private Collection $bookingRooms;
 
     public function __construct()
     {
         $this->rooms = new ArrayCollection();
+        $this->bookingRooms = new ArrayCollection();
     }
 
 
@@ -107,5 +110,14 @@ class User
 
         return $this;
     }
+
+    /**
+     *  @return Collection|BookingRoom[]
+     */
+    public function getBookingRooms(): Collection
+    {
+        return $this->bookingRooms;
+    }
+
 
 }

@@ -246,8 +246,7 @@ class __TwigTemplate_73d071ccf2d816370bc8c97f8d5672922839519bd741b8ecd394429ef1a
         $this->displayBlock('scripts', $context, $blocks);
         // line 193
         echo "</body>
-</html>
-";
+</html>";
     }
 
     // line 7
@@ -286,7 +285,7 @@ class __TwigTemplate_73d071ccf2d816370bc8c97f8d5672922839519bd741b8ecd394429ef1a
 
     public function getDebugInfo()
     {
-        return array (  272 => 192,  266 => 148,  260 => 31,  254 => 7,  248 => 193,  246 => 192,  201 => 149,  199 => 148,  156 => 108,  78 => 32,  76 => 31,  51 => 8,  49 => 7,  41 => 1,);
+        return array (  271 => 192,  265 => 148,  259 => 31,  253 => 7,  248 => 193,  246 => 192,  201 => 149,  199 => 148,  156 => 108,  78 => 32,  76 => 31,  51 => 8,  49 => 7,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -484,7 +483,6 @@ class __TwigTemplate_73d071ccf2d816370bc8c97f8d5672922839519bd741b8ecd394429ef1a
 <script src=\"/public/assets/js/pages/be_pages_dashboard.min.js\"></script>
 {% block scripts %}{% endblock %}
 </body>
-</html>
-", "layouts/app.twig", "D:\\OpenServer\\domains\\office-booking.my\\resources\\views\\layouts\\app.twig");
+</html>", "layouts/app.twig", "D:\\OpenServer\\domains\\office-booking.my\\resources\\views\\layouts\\app.twig");
     }
 }

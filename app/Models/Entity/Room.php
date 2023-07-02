@@ -4,6 +4,7 @@ namespace App\Models\Entity;
 
 use App\Models\Entity\Traits\AutoCreatedAtTrait;
 use App\Models\Entity\Traits\AutoUpdatedAtTrait;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -31,7 +32,13 @@ class Room
     #[ORM\JoinColumn(nullable: false)]
     private ?Office $office = null;
 
+    #[ORM\OneToMany(mappedBy: 'room', targetEntity: BookingRoom::class)]
+    private Collection $bookingRooms;
 
+    public function __construct()
+    {
+        $this->bookingRooms = new ArrayCollection();
+    }
     /**
      * @param $id
      * @return void
@@ -115,6 +122,14 @@ class Room
         $this->office = $office;
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, BookingRoom>
+     */
+    public function getBookingRoom(): Collection
+    {
+        return $this->bookingRooms;
     }
 
 
