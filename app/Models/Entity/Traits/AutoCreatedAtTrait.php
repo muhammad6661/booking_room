@@ -27,6 +27,6 @@ trait AutoCreatedAtTrait
      */
     public function setCreatedAt(\DateTimeImmutable $created_at): void
     {
-        $this->$created_at = $created_at;
+        $this->created_at = $created_at;
     }
 }

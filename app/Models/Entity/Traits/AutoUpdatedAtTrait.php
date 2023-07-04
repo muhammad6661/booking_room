@@ -28,7 +28,7 @@ trait AutoUpdatedAtTrait
      */
     public function setUpdatedAtValue(DateTimeImmutable $updated_at): void
     {
-        $this->$updated_at = $updated_at;
+        $this->updated_at = $updated_at;
     }
 
 }
