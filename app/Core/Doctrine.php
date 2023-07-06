@@ -2,6 +2,7 @@
 
 namespace App\Core;
 
+use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception;
@@ -31,7 +32,7 @@ class Doctrine
         $this->em = new  EntityManager($connection, $config);
 
         $timestampableListener = new TimestampableListener();
-        $timestampableListener->setAnnotationReader($this->em->getConfiguration()->getAnnotationReader());
+        $timestampableListener->setAnnotationReader(new AnnotationReader());
 
         $eventManager = $this->em->getEventManager();
         $eventManager->addEventSubscriber($timestampableListener);
